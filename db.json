@@ -1,0 +1,36 @@
+{
+    "activities": [
+        {
+            "id": 1,
+            "name": "Correr",
+            "date": 1643846051436, 
+            "distance": 1, 
+            "time": 1,
+            "elevation_gain": 1
+        },
+        { 
+            "id": 2,
+            "name": "Calistenia",
+            "date": 0, 
+            "distance": 0, 
+            "time": 0,
+            "elevation_gain": 0
+        },
+        {
+            "id": 3,
+            "name": "Escalar",
+            "date": 0, 
+            "distance": 0, 
+            "time": 0,
+            "elevation_gain": 0
+        },
+        {
+            "id": 4,
+            "name": "Trekking",
+            "date": 0, 
+            "distance": 0, 
+            "time": 0,
+            "elevation_gain": 0
+        }
+    ]
+}
