@@ -4,12 +4,11 @@ import { MonthlyStatsCard } from "../ui/MonthlyStatsCard";
 
 export const MonthlyStatsPage = () => {
 
-    const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    const months = ['Noviembre', 'Diciembre', 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
     const now = Date.now();
     const currentDate = new Date(now);
-    let currentMonth = currentDate.getMonth();
-    console.log(currentMonth)
+    const currentMonth = currentDate.getMonth();
 
     const state = useSelector(state => state);
 
@@ -19,11 +18,11 @@ export const MonthlyStatsPage = () => {
     state.user.forEach(activity => {
         const date = new Date(activity.date);
         const month = date.getMonth();
-        console.log(month)
-        //TODO: corregir algoritmo
         const monthIndex = Math.abs(currentMonth - month);
-        if (monthIndex < 3) {
+        if ((currentMonth > 1 && monthIndex < 3) || (currentMonth < 1 && monthIndex < 1) || (currentMonth < 2 && monthIndex < 2)) {
             activitiesPerMonth[monthIndex].push(activity);
+        } else if ((currentMonth < 1 && monthIndex > 9) || (currentMonth < 2 && monthIndex > 9)) {
+            activitiesPerMonth[currentMonth - month + 12].push(activity);
         }
     });
 
@@ -33,7 +32,7 @@ export const MonthlyStatsPage = () => {
         const elevation_gain = month.reduce((a, b) => a + b.elevation_gain, 0);
         statsPerMonth.push({
             index,
-            name: months[currentMonth - index],
+            name: months[2 + currentMonth - index],
             distance,
             time,
             elevation_gain
