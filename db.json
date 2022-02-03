@@ -3,34 +3,34 @@
         {
             "id": 1,
             "name": "Correr",
-            "date": 1643846051436, 
+            "date": 1, 
             "distance": 1, 
             "time": 1,
             "elevation_gain": 1
         },
         { 
-            "id": 2,
+            "id": 1,
             "name": "Calistenia",
-            "date": 0, 
+            "date": 1, 
             "distance": 0, 
             "time": 0,
             "elevation_gain": 0
         },
         {
-            "id": 3,
-            "name": "Escalar",
-            "date": 0, 
-            "distance": 0, 
-            "time": 0,
-            "elevation_gain": 0
+            "id": 1,
+            "name": "Bicicleta",
+            "date": 1, 
+            "distance": 1, 
+            "time": 1,
+            "elevation_gain": 1
         },
         {
-            "id": 4,
+            "id": 1,
             "name": "Trekking",
-            "date": 0, 
-            "distance": 0, 
-            "time": 0,
-            "elevation_gain": 0
+            "date": 1, 
+            "distance": 1, 
+            "time": 1,
+            "elevation_gain": 1
         }
     ]
 }
